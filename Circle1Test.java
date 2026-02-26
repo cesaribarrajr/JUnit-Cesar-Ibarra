@@ -55,6 +55,22 @@ public void simpleMoveNeg()
    p = circle1.moveBy(-1,-1);
    assertTrue(p.x == 0 && p.y == 1);
 }
+// Positive offsets move center correctly in both axes 
+//
+   @Test
+   public void moveByPositiveOffsets()
+   {
+      Point p = circle2.moveBy(1, 1);
+      assertTrue(p.x == 2 && p.y == 3);
+   }
 
+// Negative offsets move center correctly in both axes 
+//
+   @Test
+   public void moveByNegativeOffsets()
+   {
+      Point p = circle1.moveBy(-1, -1);
+      assertTrue(p.x == 0 && p.y == 1);
+   }
 }
 
