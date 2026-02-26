@@ -1,0 +1,9 @@
+1. Circle.moveBy() -- yOffset not used for y coordinate
+   File: Circle.java, method moveBy()
+   Bug: `center.y = center.y + xOffset;` uses xOffset for both x and y.
+2. Circle.scale() -- adds factor instead of multiplying
+   File: Circle.java, method scale()
+   Bug: `radius = radius + factor;` should multiply to scale, not add.
+3. Circle2() constructor -- x and y coordinates swapped
+   File: Circle2.java, constructor Circle2(double x, double y, double radius)
+   Bug: `super(y, x, radius);` passes y as x and x as y
